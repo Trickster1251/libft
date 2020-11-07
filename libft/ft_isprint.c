@@ -6,15 +6,15 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 17:21:59 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/07 17:29:01 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/07 18:49:30 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+#include "libft.h"
 
 int ft_isprint(int c)
 {
-	if (chr >= 33 && chr <= 126)
+	if (c >= 33 && c <= 126)
 		return 1;
 	else
 		return 0;

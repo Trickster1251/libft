@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 17:50:21 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/07 17:51:55 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/07 18:42:12 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,4 @@ void	ft_bzero(void *s, size_t n)
 	list = (unsigned char*)s;
 	while(n--)
 		*list++ = '\0';
+}
