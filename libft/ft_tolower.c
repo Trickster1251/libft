@@ -6,17 +6,16 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 17:18:13 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/07 17:20:01 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/14 02:48:58 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int chr)
+int		ft_tolower(int chr)
 {
 	if (chr >= 'A' && chr <= 'Z')
 		return (chr + 32);
 	else
 		return (chr);
 }
-

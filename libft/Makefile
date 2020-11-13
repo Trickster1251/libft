@@ -8,15 +8,15 @@ OBJ = $(SRC:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			@ar rc $(NAME) $(OBJ)
-			@ranlib $(NAME)
+			ar rc $(NAME) $(OBJ)
+			ranlib $(NAME)
 			@echo "Libft success created"
 
-%.o: %.c	$(SRC)
-			gcc $(FLAGS) -c $(SRC)
+%.o: %.c	$(SRC) $(BONUS_SRCS)
+			gcc $(FLAGS) -c $(SRC) $(BONUS_SRCS)
 
 clean:
-			@rm -rf $(OBJ)
+			@rm -rf $(OBJ) $(BONUS_SRCS)
 			@echo "all *.o files been deleted"
 
 fclean:		clean
@@ -24,4 +24,10 @@ fclean:		clean
 			@echo "Remove libft.a"
 
 re:		fclean all
-		
+
+bonus:		$(BONUS_OBJ)
+			@ar rc $(NAME) $(BONUS_OBJ)
+			@ranlib $(NAME)
+			@echo "Libft success created"
+
+	

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 19:14:05 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:38:31 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/11 17:27:59 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/11 19:20:44 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int symbol)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*s;
-	int		i;
+	size_t i;
+	size_t j;
+	char* src = (char*) needle;
+	char* dst = (char*) haystack;
 
-	s = (char *)str;
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == symbol)
-			return (&s[i]);
-		i++;
+	j = 0;
+	while(src[i] && len--)
+	{		
+		if (src[i] == dst[j])
+		{
+			
+		}
 	}
-	if (symbol == '\0')
-		return (&s[i]);
-	return (NULL);
 }

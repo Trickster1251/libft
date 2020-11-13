@@ -6,17 +6,16 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 17:21:37 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/07 17:21:38 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/14 02:49:15 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int chr)
+int		ft_toupper(int chr)
 {
 	if ((chr >= 'a' && chr <= 'z'))
 		return (chr - 32);
 	else
 		return (chr);
 }
-

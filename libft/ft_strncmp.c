@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 19:14:05 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:38:31 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/09 20:11:27 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/14 02:44:40 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int symbol)
+int		ft_strncmp(const char *str, const char *str1, size_t n)
 {
-	char	*s;
-	int		i;
+	unsigned char	*s;
+	unsigned char	*s1;
+	size_t			i;
 
-	s = (char *)str;
+	s = (unsigned char*)str;
+	s1 = (unsigned char*)str1;
 	i = 0;
-	while (s[i])
+	while (i < n && (s[i] || s1[i]))
 	{
-		if (s[i] == symbol)
-			return (&s[i]);
+		if (s[i] != s1[i])
+			return (s[i] - s1[i]);
 		i++;
 	}
-	if (symbol == '\0')
-		return (&s[i]);
-	return (NULL);
+	return (0);
 }

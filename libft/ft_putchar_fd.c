@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 19:14:05 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:38:31 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/10 20:25:18 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/14 02:35:35 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int symbol)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*s;
-	int		i;
+	unsigned char chr;
 
-	s = (char *)str;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == symbol)
-			return (&s[i]);
-		i++;
-	}
-	if (symbol == '\0')
-		return (&s[i]);
-	return (NULL);
+	c = chr;
+	write(fd, &chr, 1);
 }

@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 19:14:05 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:38:31 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/11 18:04:41 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/14 02:24:06 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int symbol)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*s;
-	int		i;
+	void *buff;
 
-	s = (char *)str;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == symbol)
-			return (&s[i]);
-		i++;
-	}
-	if (symbol == '\0')
-		return (&s[i]);
-	return (NULL);
+	buff = (void*)malloc(count * size);
+	if (!buff)
+		return (NULL);
+	ft_bzero(buff, count * size);
+	return (buff);
 }
