@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/11 17:27:59 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/15 18:56:30 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/15 19:28:09 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/15 20:45:23 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *src, const char *find_str, size_t len)
+char *ft_strjoin(const char *s1, const char *s2)
 {
 	size_t i;
-	size_t pos;
+	char* cat_s;
 
-	pos = 0;
-	if (!(*find_str))
-		return ((char*)src);
-	if (len == 0)
-		return (0); 
-	while (src[pos] && pos < len)
-	{		
-			i = 0;
-			while (src[pos + i] == find_str[i] && find_str[i] && (pos + i) < len)
-				i++;
-			if (find_str[i] == '\0')
-				return ((char*)&src[pos]);
-		pos++;
+	i = 0;
+	if (!(s1 && s2))
+		return (NULL);
+	if (!(	cat_s = (char*)malloc(sizeof(char) *
+		(ft_strlen((char*)s1) + ft_strlen((char*)s2) + 1))))
+			return(NULL);
+	while (s1[i])
+	{
+		cat_s[i] = s1[i];
+		i++;
 	}
-	return (NULL);
+	while (*s2)
+	{
+		cat_s[i] = *s2++;
+		i++;
+	}
+	cat_s[i] = '\0';
+	return (cat_s);
+
 }
