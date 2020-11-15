@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/11 17:27:59 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/11 19:20:44 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/05 16:04:10 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/14 02:31:10 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t i;
-	size_t j;
-	char* src = (char*) needle;
-	char* dst = (char*) haystack;
+	unsigned char		*s;
+	int			i;
 
+	s = (unsigned char*)str;
 	i = 0;
-	j = 0;
-	while(src[i] && len--)
-	{		
-		if (src[i] == dst[j])
-		{
-			
-		}
+	while (n--)
+	{
+		if (s[i] == (unsigned char)c)
+			return (&s[i]);
+		i++;
 	}
+	return (NULL);
 }

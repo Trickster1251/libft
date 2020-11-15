@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int symbol)
 {
-	char	*s;
+	char		*s;
 	int		i;
 
 	s = (char *)str;

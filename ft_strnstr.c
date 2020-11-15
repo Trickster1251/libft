@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/10 20:25:18 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:35:35 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/11 17:27:59 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/11 19:20:44 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char *ft_strnstr(const char *src, const char *find_str, size_t len)
 {
-	unsigned char chr;
+	size_t i;
+	size_t pos;
 
-	c = chr;
-	write(fd, &chr, 1);
+	pos = 0;
+	if (!*find_str)
+		return ((char*)src);
+	while (src[pos] && len--)
+	{		
+		if (src[pos] == find_str[0])
+		{
+			i = 0;
+			while (src[pos + i] == find_str[i] && (pos + i) <= len)
+				i++;
+			if (find_str[i] == '\0')
+				return ((char*)&src[pos]);
+		}
+		pos++;
+	}
+	return (0);
 }
