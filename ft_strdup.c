@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 18:56:52 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/15 19:01:17 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:14:33 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *src)
 {
-	int		i;
-	int		len;
+	int			i;
+	int			len;
 	char		*str;
 
 	i = 0;

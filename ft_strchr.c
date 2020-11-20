@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 19:14:05 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:38:31 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:15:37 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *str, int symbol)
 {
 	char		*s;
-	int		i;
+	int			i;
 
 	s = (char *)str;
 	i = 0;

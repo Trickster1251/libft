@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 16:04:10 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:31:10 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:13:38 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char		*s;
-	int			i;
+	int					i;
 
 	s = (unsigned char*)str;
 	i = 0;

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/14 02:42:23 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/18 19:57:30 by walethea         ###   ########.fr       */
+/*   Created: 2020/11/20 18:21:06 by walethea          #+#    #+#             */
+/*   Updated: 2020/11/20 18:22:52 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(char *str)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char *list;
 
-	i = 0;
-	while (*str++)
-		i++;
-	return (i);
+	list = (unsigned char*)s;
+	while (n--)
+		*list++ = c;
+	return (s);
 }

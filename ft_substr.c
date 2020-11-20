@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:17:14 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/15 21:08:05 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:45:44 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*start_more_len(unsigned char *sub_s)
 {
-		sub_s = (unsigned char*)malloc(sizeof(unsigned char) * 1);
-		if (!sub_s)
-			return (NULL);
-		*sub_s = '\0';
-		return ((char*)sub_s);
+	sub_s = (unsigned char*)malloc(sizeof(unsigned char) * 1);
+	if (!sub_s)
+		return (NULL);
+	*sub_s = '\0';
+	return ((char*)sub_s);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
