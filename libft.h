@@ -6,13 +6,14 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 02:49:50 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/20 20:54:31 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:59:33 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 void		ft_bzero(void *s, size_t n);
 int			ft_atoi(char *str);

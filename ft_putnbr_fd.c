@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 20:59:44 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/14 02:37:03 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/20 21:12:16 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,39 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long	nbr;
+	int		mc;
+	int		s;
+	char	r[10];
 
+	mc = n;
+	s = 0;
+	if (n == 0)
+		ft_putchar_fd('0', fd);
 	if (n < 0)
+		n *= -1;
+	while (n > 0)
 	{
-		ft_putchar_fd('-', 1);
-		nbr = n * -1;
+		r[s] = n % 10 + '0';
+		s++;
+		n /= 10;
 	}
-	else
-		nbr = n;
-	if (nbr >= 10)
-		ft_putnbr_fd(nbr / 10, fd);
-	ft_putchar_fd(nbr % 10 + 48, fd);
+	if (mc < 0)
+		ft_putchar_fd('-', fd);
+	while (s > 0)
+	{
+		s--;
+		ft_putchar_fd(r[s], fd);
+	}
 }
+
+// void	ft_putnumb_fd(int n, int fd)
+// {
+// 	if (n < 0)
+// 		n *- 1;
+// 	if (n == 0)
+// 		ft_putchar_fd('0', 1);
+// 	while (n >= 10)
+// 	{
+		
+// 	}
+// }

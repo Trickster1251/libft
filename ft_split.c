@@ -12,20 +12,29 @@
 
 #include "libft.h"
 
-int		count_word(char *str, char sym)
+int        count_word(char *str, char sym)
 {
-	int		i;
-	int		count;
+    int        i;
+    int        count;
 
-	i = 0;
-	count = 0;
-	while (str[i])
-	{
-		if (str[i] == sym && !(str[i + 1] == sym && !(str[i - 1] == sym)))
+    i = 0;
+    count = 0;
+    if (sym == 0)
+        return (1);
+    while (*str)
+    {
+		if (*str != sym && i == 0)
+		{
 			count++;
-		i++;
-	}
-	return (count);
+			i = 1;
+		}
+		if (*str == sym && i == 1)
+		{
+			i= 0;
+		}
+		str++;
+    }
+    return (count);
 }
 
 char	**free_all(char **str)
@@ -54,7 +63,7 @@ char	*malloc_word(const char *src, char sym)
 		len++;
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (src && (i < len))
+	while (src[i] && i < len)
 	{
 		str[i] = src[i];
 		i++;
@@ -65,10 +74,8 @@ char	*malloc_word(const char *src, char sym)
 
 char	**ft_split_new(char const *s, char c, char **words)
 {
-	int		i;
 	int		j;
 
-	i = 0;
 	j = 0;
 	while (*s)
 	{
@@ -97,7 +104,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	col_words = count_word((char*)s, c);
-	if (!(words = (char**)malloc((sizeof(char*) * col_words) + 1)))
+	if (!(words = (char**)malloc((sizeof(char*) * (col_words + 1)))))
 		return (NULL);
 	return (ft_split_new(s, c, words));
 }

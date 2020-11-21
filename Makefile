@@ -6,7 +6,7 @@
 #    By: walethea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 18:01:19 by walethea          #+#    #+#              #
-#    Updated: 2020/11/20 18:15:13 by walethea         ###   ########.fr        #
+#    Updated: 2020/11/20 21:00:42 by walethea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ FLAGS = -Wall -Wextra -Werror
 SRC = *.c
 OBJ = $(SRC:.c=.o)
 
-.PHONY:		all clean fclean re
+.PHONY:		$(NAME) all clean fclean re
 
 all:		$(NAME)
 
