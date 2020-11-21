@@ -23,7 +23,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 		return (0);
 	else if (size != 0)
 	{
-		while (src[i] && (i < size--))
+		while (src[i] && (i < (size - 1)))
 		{
 			d[i] = src[i];
 			i++;
