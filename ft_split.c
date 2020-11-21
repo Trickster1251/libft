@@ -12,29 +12,27 @@
 
 #include "libft.h"
 
-int        count_word(char *str, char sym)
+int		count_word(char *str, char sym)
 {
-    int        i;
-    int        count;
+	int			i;
+	int			count;
 
-    i = 0;
-    count = 0;
-    if (sym == 0)
-        return (1);
-    while (*str)
-    {
+	i = 0;
+	count = 0;
+	if (sym == 0)
+		return (1);
+	while (*str)
+	{
 		if (*str != sym && i == 0)
 		{
 			count++;
 			i = 1;
 		}
 		if (*str == sym && i == 1)
-		{
-			i= 0;
-		}
+			i = 0;
 		str++;
-    }
-    return (count);
+	}
+	return (count);
 }
 
 char	**free_all(char **str)

@@ -12,41 +12,57 @@
 
 #include "libft.h"
 
+// void	ft_putchar_fd(char c, int fd)
+// {
+// 	unsigned char chr;
+
+// 	chr = c;
+// 	write(fd, &chr, 1);
+// }
+
+// void	ft_putstr_fd(char *s, int fd)
+// {
+// 	int i;
+
+// 	i = 0;
+// 	if (!s || !fd)
+// 		return ;
+// 	while (s[i])
+// 	{
+// 		write(fd, &s[i], 1);
+// 		i++;
+// 	}
+// }
+
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		mc;
-	int		s;
-	char	r[10];
+	int	mod;
+	int	dif;
+	int		chr;
 
-	mc = n;
-	s = 0;
-	if (n == 0)
-		ft_putchar_fd('0', fd);
-	if (n < 0)
+	mod = 0;
+	dif = 0;
+	chr = 48;
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return;
+	}
+	else if (n < 0)
+	{
 		n *= -1;
-	while (n > 0)
-	{
-		r[s] = n % 10 + '0';
-		s++;
-		n /= 10;
+		write(fd, "-", 1);
 	}
-	if (mc < 0)
-		ft_putchar_fd('-', fd);
-	while (s > 0)
-	{
-		s--;
-		ft_putchar_fd(r[s], fd);
-	}
+	mod = n % 10;
+	dif = n / 10;
+	if (dif != 0)
+		ft_putnbr_fd(dif, fd);
+	chr += mod;
+	write(fd, &chr, 1);
 }
 
-// void	ft_putnumb_fd(int n, int fd)
+// int main()
 // {
-// 	if (n < 0)
-// 		n *- 1;
-// 	if (n == 0)
-// 		ft_putchar_fd('0', 1);
-// 	while (n >= 10)
-// 	{
-		
-// 	}
+// 	ft_putnbr_fd(-5, 1);
 // }
