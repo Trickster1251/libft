@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 20:59:44 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/20 21:12:16 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/23 22:34:48 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	mod;
-	int	dif;
+	int		mod;
+	int		dif;
 	int		chr;
 
 	mod = 0;
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
-		return;
+		return ;
 	}
 	else if (n < 0)
 	{
