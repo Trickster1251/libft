@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 02:49:50 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/23 22:00:35 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/23 22:25:30 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void *content;
+	struct s_list *next;
+} 	t_list;
 
 void		ft_bzero(void *s, size_t n);
 int			ft_atoi(char *str);
