@@ -6,7 +6,7 @@
 #    By: walethea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 21:26:37 by walethea          #+#    #+#              #
-#    Updated: 2020/11/23 22:01:08 by walethea         ###   ########.fr        #
+#    Updated: 2020/11/23 23:55:01 by walethea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,9 @@ BONUS_SRCS = ft_lstnew.c \
 			 ft_lstsize.c \
 			 ft_lstlast.c \
 			 ft_lstadd_back.c \
+			 ft_lstdelone.c \
+			 ft_lstclear.c \
+			 ft_lstiter.c \
 			 
 OBJS = $(SRCS:.c=.o)
 
