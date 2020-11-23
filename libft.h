@@ -6,7 +6,7 @@
 /*   By: walethea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 02:49:50 by walethea          #+#    #+#             */
-/*   Updated: 2020/11/20 20:59:33 by walethea         ###   ########.fr       */
+/*   Updated: 2020/11/23 22:00:35 by walethea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 void		ft_bzero(void *s, size_t n);
 int			ft_atoi(char *str);
@@ -49,4 +54,9 @@ char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char        *ft_itoa(int n);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+t_list		*ft_lstlast(t_list *lst);
+t_list		*ft_lstnew(void *content);
+int			ft_lstsize(t_list *lst);
 #endif
