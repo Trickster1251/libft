@@ -12,29 +12,6 @@
 
 #include "libft.h"
 
-// void	ft_putchar_fd(char c, int fd)
-// {
-// 	unsigned char chr;
-
-// 	chr = c;
-// 	write(fd, &chr, 1);
-// }
-
-// void	ft_putstr_fd(char *s, int fd)
-// {
-// 	int i;
-
-// 	i = 0;
-// 	if (!s || !fd)
-// 		return ;
-// 	while (s[i])
-// 	{
-// 		write(fd, &s[i], 1);
-// 		i++;
-// 	}
-// }
-
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	int	mod;
@@ -61,8 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 	chr += mod;
 	write(fd, &chr, 1);
 }
-
-// int main()
-// {
-// 	ft_putnbr_fd(-5, 1);
-// }
